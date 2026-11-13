@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# generated crypto material / outputs (keep local; share intentionally)
+output/*
+!output/.gitkeep
+data/*
+!data/.gitkeep
+!data/sample.txt

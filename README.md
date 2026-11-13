@@ -28,21 +28,21 @@ python generate_keys.py
 # or: python generate_keys.py keys/
 # or: python generate_keys.py keys/private.pem keys/public.pem
 
-python hash_file.py "data/AMD image file.JPG"
+python hash_file.py "input/AMD image file.JPG"
 
-python encrypt_decrypt.py encrypt "data/AMD image file.JPG" "output/AMD image file.JPG.enc" output/public.pem
+python encrypt_decrypt.py encrypt "input/AMD image file.JPG" "output/AMD image file.JPG.enc" output/public.pem
 python encrypt_decrypt.py decrypt "output/AMD image file.JPG.enc" "output/AMD image file.JPG.dec" output/private.pem
 ```
 
 Round-trip check:
 
 ```bash
-cmp "data/AMD image file.JPG" "output/AMD image file.JPG.dec" && echo OK
+cmp "input/AMD image file.JPG" "output/AMD image file.JPG.dec" && echo OK
 ```
 
 ## Layout
 
 ```
-data/      original input (e.g. AMD image file.JPG)
+input/    original input (e.g. AMD image file.JPG)
 output/   keys and encrypted file (keys can live anywhere; pass the path)
 ```

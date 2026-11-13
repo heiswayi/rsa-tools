@@ -1,0 +1,3 @@
+# Only non-stdlib dependency we need.
+# hashlib (SHA-256) ships with Python. RSA helpers do not.
+cryptography==50.0.2
